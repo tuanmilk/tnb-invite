@@ -4,95 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thiệp Mời TNB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Nhạc nền -->
-  <audio id="bgm" autoplay loop>
-    <source src="piano.mp3" type="audio/mpeg" />
-  </audio>
+<!-- Nhạc nền -->
+<audio id="bgm" autoplay loop>
+  <source src="piano.mp3" type="audio/mpeg" />
+</audio>
 
-  <!-- Phần phong bì đóng -->
-  <div class="envelope" onclick="openInvite()">
-    <img src="envelope_closed.png" alt="Phong bì" id="envelope">
-    <p class="envelope-text">-- NHẤP VÀO THIỆP ĐỂ MỞ --</p>
+<!-- Phong bì đóng -->
+<div class="envelope" onclick="openInvite()">
+  <img src="envelope_closed.png" alt="Phong bì" id="envelope">
+  <p class="envelope-text">→ NHẤP VÀO THIỆP ĐỂ MỞ ←</p>
+</div>
+
+<!-- Nội dung thiệp -->
+<div class="invite" id="invite" style="display: none;">
+  
+  <!-- Nút mạng xã hội -->
+  <div class="social-icons">
+    <a href="https://youtube.com/channel/UCrMYMdk6wfWBZ2qKGJMww4g/ThanhNh%C3%A3VlogTNB?si=WkbxnfpPLecFEIkC" target="_blank">
+      <img src="yt1.png" alt="YouTube 1">
+      <p>Thanh Nhã Vlog</p>
+    </a>
+    <a href="https://youtube.com/@thanhnhatv_tnb?si=ppz6WPfeKUt2CTFT" target="_blank">
+      <img src="yt2.png" alt="YouTube 2">
+      <p>Thanh Nhã TV</p>
+    </a>
+    <a href="https://www.tiktok.com/@tnbteam9999?_t=ZS-8y1LtbDMCP9&_r=1" target="_blank">
+      <img src="tiktok.png" alt="TikTok">
+      <p>TNB Team</p>
+    </a>
   </div>
 
-  <!-- Nội dung thiệp -->
-  <div class="invite" id="invite" style="display: none;">
-    <div class="card">
+  <div class="card">
+    <img src="logo.png" alt="Logo TNB" class="logo" />
+    <h2>KỶ NIỆM 5 NĂM TEAM TNB</h2>
 
-      <!-- Nút mạng xã hội -->
-      <div class="social-links">
-        <a href="https://youtube.com/channel/UCrMYMdk6wfWBZ2qKGJMww4g/ThanhNh%C3%A3VlogTNB?si=WkbxnfpPLecFEIkC" class="social-btn" target="_blank">
-          <img src="yt_icon.png" alt="YouTube Vlog" class="social-icon" />
-          <p>Vlog</p>
-        </a>
-        <a href="https://youtube.com/@thanhnhatv_tnb?si=ppz6WPfeKUt2CTFT" class="social-btn" target="_blank">
-          <img src="yt_icon.png" alt="YouTube TV" class="social-icon" />
-          <p>TV</p>
-        </a>
-        <a href="https://www.tiktok.com/@tnbteam9999?_t=ZS-8y1LtbDMCP9&_r=1" class="social-btn" target="_blank">
-          <img src="tiktok_icon.png" alt="TikTok TNB" class="social-icon" />
-          <p>TikTok</p>
-        </a>
+    <p>🎉 Nhân dịp kỷ niệm 5 năm thành lập, TEAM TNB trân trọng kính mời bạn đến tham dự buổi tiệc thân mật đánh dấu chặng đường đã qua và cùng nhau nhìn lại những khoảnh khắc đáng nhớ.</p>
+    <p>💌 Sự hiện diện của bạn là niềm vinh hạnh to lớn đối với chúng tôi!</p>
+    <p>❤️ Chân thành cảm ơn bạn đã đồng hành cùng TEAM TNB trong suốt hành trình này.</p>
+    <p>– TNB TEAM –</p>
+
+    <p>⏰ <strong>Thời gian:</strong> 16h00 – Ngày 19/07/2025</p>
+    <p>📍 <strong>Địa điểm:</strong> Nhà hàng Hương Quê – Sa Đéc</p>
+    <p>📲 <a href="https://maps.app.goo.gl/3UGHnNccwX8sRNu29" target="_blank">Xem bản đồ</a></p>
+
+    <!-- QR -->
+    <div class="qr-block">
+      <div class="qr-item">
+        <p>📌 Quét để xem bản đồ</p>
+        <img src="qr_maps.png" class="qr" alt="QR bản đồ" />
       </div>
-
-      <!-- Logo -->
-      <img src="logo.png" alt="Logo TNB" class="logo" />
-      <h2>KỶ NIỆM 5 NĂM TEAM TNB</h2>
-
-      <!-- Lời mời -->
-      <div class="thankyou">
-        🎉 Nhân dịp kỷ niệm 5 năm thành lập, TEAM TNB trân trọng kính mời bạn đến tham dự buổi tiệc thân mật đánh dấu chặng đường đã qua và cùng nhau nhìn lại những khoảnh khắc đáng nhớ.  
-        <br><br>
-        💌 Sự hiện diện của bạn là niềm vinh hạnh to lớn đối với chúng tôi!
+      <div class="qr-item">
+        <p>💖 Chuyển khoản mừng</p>
+        <img src="qr_bank.png" class="qr" alt="QR ngân hàng" />
       </div>
-
-      <!-- Lời cảm ơn -->
-      <div class="thankyou">
-        ❤️ Chân thành cảm ơn bạn đã đồng hành cùng TEAM TNB trong suốt hành trình này.  
-        <br><br>
-        – TNB TEAM –
-      </div>
-
-      <!-- Thông tin -->
-      <p><strong>⏰ Thời gian:</strong> 16h00 – Ngày 19/07/2025</p>
-      <p><strong>📍 Địa điểm:</strong> Nhà hàng Hương Quê – Sa Đéc</p>
-      <p>📱 <a href="https://maps.app.goo.gl/3UGHnNccwX8sRNu29" target="_blank">Xem bản đồ</a></p>
-
-      <!-- QR block -->
-      <div class="qr-block">
-        <div class="qr-item">
-          <p>📌 Quét để xem bản đồ</p>
-          <img src="qr_maps.png" class="qr" alt="QR bản đồ" />
-        </div>
-        <div class="qr-item">
-          <p>💖 Chuyển khoản mừng</p>
-          <img src="qr_bank.png" class="qr" alt="QR ngân hàng" />
-        </div>
-      </div>
-
     </div>
   </div>
+</div>
 
-  <!-- Script mở thiệp + phát nhạc -->
-  <script>
-    function openInvite() {
-      document.getElementById("envelope").style.display = "none";
-      document.querySelector(".envelope-text").style.display = "none";
-      document.getElementById("invite").style.display = "block";
+<!-- Script mở thiệp -->
+<script>
+function openInvite() {
+  document.getElementById("envelope").style.display = "none";
+  document.querySelector(".envelope-text").style.display = "none";
+  document.getElementById("invite").style.display = "block";
 
-      // Phát nhạc nếu chưa phát
-      const audio = document.getElementById("bgm");
-      if (audio.paused) {
-        audio.play().catch(e => {
-          console.log("Không thể phát nhạc tự động:", e);
-        });
-      }
-    }
-  </script>
+  const audio = document.getElementById("bgm");
+  if (audio.paused) {
+    audio.play().catch(e => {
+      console.log("Không thể phát nhạc tự động:", e);
+    });
+  }
+}
+</script>
 
 </body>
 </html>
