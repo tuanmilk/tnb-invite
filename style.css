@@ -1,47 +1,85 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: url("bg.png") no-repeat center center fixed;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('bg.png') no-repeat center center fixed;
   background-size: cover;
+  color: #fff;
+  text-align: center;
 }
 
 .envelope {
-  text-align: center;
-  padding-top: 50px;
+  margin-top: 60px;
 }
 
 .envelope img {
-  width: 200px;
-  max-width: 80%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.envelope img:hover {
-  transform: scale(1.05);
+  width: 60%;
+  max-width: 300px;
+  cursor: pointer;
 }
 
 .envelope-text {
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-  margin-top: 15px;
-  font-family: "Segoe UI", sans-serif;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #aaa;
 }
 
-/* Responsive - tối ưu cho điện thoại */
-@media (max-width: 600px) {
-  .envelope {
-    padding-top: 30px;
+.invite {
+  padding: 20px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+.logo {
+  width: 60%;
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.qr-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.qr-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  width: 80%;
+  max-width: 250px;
+}
+
+.qr-item p {
+  margin-bottom: 5px;
+  color: #000;
+  font-size: 0.9em;
+}
+
+.qr {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .qr-block {
+    gap: 16px;
   }
 
-  .envelope img {
-    width: 160px;
+  .qr-item {
+    width: 90%;
   }
 
-  .envelope-text {
-    font-size: 16px;
-    margin-top: 10px;
+  .logo {
+    width: 70%;
   }
 }
