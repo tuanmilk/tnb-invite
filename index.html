@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thiệp Mời TNB</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <img src="envelope_closed.png" alt="Phong bì" class="envelope" onclick="openInvite()" />
-
-    <audio id="bgm" autoplay loop>
-      <source src="piano.mp3" type="audio/mpeg" />
-    </audio>
+    <div class="envelope" onclick="openInvite()">
+      <img src="envelope_closed.png" id="envelope-img" alt="Phong bì" />
+    </div>
 
     <div class="invite" id="invite">
-      <img src="logo.jpg" alt="Logo TNB" class="logo" />
+      <audio id="bgm" autoplay loop>
+        <source src="piano.mp3" type="audio/mpeg">
+      </audio>
+
+      <img src="logo.jpg" class="logo" alt="Logo TNB" />
       <h1>KỶ NIỆM 5 NĂM TEAM TNB</h1>
-      <p><strong>Thời gian:</strong> 16h00 - Ngày 19/07/2025</p>
-      <p><strong>Địa điểm:</strong> Nhà hàng Hương Quê – Sa Đéc</p>
+      <p><strong>⏰ Thời gian:</strong> 16h00 - Ngày 19/07/2025</p>
+      <p><strong>📍 Địa điểm:</strong> Nhà hàng Hương Quê – Sa Đéc</p>
 
       <div class="qr-container">
         <div class="qr-item">
-          <p>Xem bản đồ</p>
-          <img src="qr_maps.png" alt="QR Maps" />
+          <p>🗺️ Xem bản đồ</p>
+          <img src="qr_maps.png" alt="QR Maps">
         </div>
         <div class="qr-item">
-          <p>Chuyển khoản mừng</p>
-          <img src="qr_bank.jpg" alt="QR Bank" />
+          <p>💌 Chuyển khoản mừng</p>
+          <img src="qr_bank.jpg" alt="QR Bank">
         </div>
       </div>
     </div>
   </div>
 
-  <script>
-    function openInvite() {
-      document.getElementById('invite').style.display = 'block';
-      document.querySelector('.envelope').style.display = 'none';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
