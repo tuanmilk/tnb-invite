@@ -1,49 +1,40 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: url('background.png') no-repeat center center fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("bg.png"); /* ảnh nền bạn đã up */
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #fff;
     text-align: center;
 }
 
-.envelope {
-    margin-top: 20vh;
-    cursor: pointer;
-    animation: pulse 1.5s infinite;
-}
-
-.envelope img {
-    width: 60vw;
-    max-width: 300px;
-}
-
 .invite {
-    display: none;
-    padding: 20px;
-    background-color: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     margin: 20px auto;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 15px;
     width: 90%;
     max-width: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .logo {
-    width: 60vw;
-    max-width: 200px;
+    width: 120px;
+    height: auto;
     margin-bottom: 15px;
 }
 
 h1 {
-    font-size: 1.8em;
-    color: #ffcc00;
-    margin: 10px 0;
+    color: #ffd700;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 p {
-    font-size: 1em;
-    margin: 8px 0;
+    font-size: 15px;
+    margin: 5px 0;
 }
 
 strong {
@@ -58,38 +49,40 @@ strong {
 }
 
 .qr-block div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 10px;
 }
 
 .qr {
-    width: 50px;
-    height: 50px;
-    border: 2px solid white;
-    border-radius: 5px;
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-/* Responsive */
+/* Responsive cho điện thoại nhỏ */
 @media (max-width: 600px) {
-    .logo, .envelope img {
-        width: 80vw;
+    .invite {
+        width: 95%;
+        padding: 15px;
     }
 
-    h1 {
-        font-size: 1.5em;
-    }
-
-    p {
-        font-size: 0.95em;
+    .logo {
+        width: 100px;
     }
 
     .qr {
-        width: 40px;
-        height: 40px;
+        width: 90px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
     }
 }
