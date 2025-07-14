@@ -1,0 +1,31 @@
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom right, #f0f8ff, #e6f7ff);
+  margin: 0;
+  padding: 0;
+}
+.envelope {
+  margin-top: 80px;
+  cursor: pointer;
+}
+#invite {
+  display: none;
+  padding: 20px;
+}
+.logo {
+  width: 100px;
+  margin-top: 20px;
+}
+.qr-block {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+.qr {
+  width: 120px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}

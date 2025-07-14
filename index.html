@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thiệp Mời TNB</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="envelope" onclick="openInvite()">
+    <img src="assets/envelope_closed.png" alt="Phong bì đóng" id="envelope"/>
+    <audio id="bgm" autoplay loop>
+      <source src="assets/piano.wav" type="audio/mpeg"/>
+    </audio>
+  </div>
+  <div class="invite" id="invite">
+    <img src="assets/logo.jpg" class="logo" alt="Logo TNB"/>
+    <h1>KỶ NIỆM 5 NĂM TEAM TNB</h1>
+    <p><strong>Thời gian:</strong> 16h00 - Ngày 19/07/2025</p>
+    <p><strong>Địa điểm:</strong> Nhà hàng Hương Quê – Sa Đéc</p>
+    <div class="qr-block">
+      <div>
+        <p>Quét để xem bản đồ</p>
+        <img src="assets/qr_maps.png" class="qr"/>
+      </div>
+      <div>
+        <p>Chuyển khoản mừng</p>
+        <img src="assets/qr_bank.jpg" class="qr"/>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
