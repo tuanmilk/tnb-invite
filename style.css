@@ -62,10 +62,10 @@ strong {
 }
 
 .qr {
-    width: 100px;
-    height: 100px;
-    border: 3px solid white;
-    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 @keyframes pulse {
