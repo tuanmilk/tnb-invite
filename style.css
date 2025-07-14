@@ -12,14 +12,14 @@ body {
 }
 
 .envelope img {
-  width: 60%;
+  width: 80%;
   max-width: 300px;
   cursor: pointer;
 }
 
 .envelope-text {
   margin-top: 10px;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #aaa;
 }
 
