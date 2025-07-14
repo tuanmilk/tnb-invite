@@ -12,8 +12,8 @@ body {
 }
 
 .envelope {
-  width: 80%;
-  max-width: 300px;
+  width: 50%;
+  max-width: 150px;
   margin-top: 50px;
   cursor: pointer;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 .logo {
-  width: 100px;
+  width: 200px;
   margin: 20px auto;
 }
 
