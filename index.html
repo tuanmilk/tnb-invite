@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- Nhạc nền -->
   <audio id="bgm" autoplay loop>
     <source src="piano.mp3" type="audio/mpeg" />
@@ -14,7 +15,7 @@
 
   <!-- Phần phong bì đóng -->
   <div class="envelope" onclick="openInvite()">
-    <img src="envelope_closed.png" alt="Phong bì" id="envelope">
+    <img src="envelope_closed.png" alt="Phong bì" id="envelope" />
     <p class="envelope-text">– NHẤP VÀO THIỆP ĐỂ MỞ –</p>
   </div>
 
@@ -23,11 +24,13 @@
     <div class="card">
       <img src="logo.png" alt="Logo TNB" class="logo" />
       <h2>KỶ NIỆM 5 NĂM TEAM TNB</h2>
+
       <div class="thankyou">
-  ❤️ Chân thành cảm ơn bạn đã đồng hành cùng TEAM TNB trong suốt chặng đường vừa qua.<br>
-  🎉 Rất mong được gặp lại bạn trong buổi tiệc kỷ niệm ấm cúng này!<br>
-  – TNB TEAM –
-</div>
+        ❤️ Chân thành cảm ơn bạn đã đồng hành cùng TEAM TNB trong suốt chặng đường vừa qua.<br>
+        🥳 Rất mong được gặp lại bạn trong buổi tiệc kỷ niệm ấm cúng này!<br><br>
+        – TNB TEAM –
+      </div>
+
       <p><strong>⏰ Thời gian:</strong> 16h00 – Ngày 19/07/2025</p>
       <p><strong>📍 Địa điểm:</strong> Nhà hàng Hương Quê – Sa Đéc</p>
       <p>📱 <a href="#" target="_blank">Xem bản đồ</a></p>
@@ -38,8 +41,9 @@
           <p>📌 Quét để xem bản đồ</p>
           <img src="qr_maps.png" class="qr" alt="QR bản đồ" />
         </div>
+
         <div class="qr-item">
-          <p>💗 Chuyển khoản mừng</p>
+          <p>💖 Chuyển khoản mừng</p>
           <img src="qr_bank.png" class="qr" alt="QR ngân hàng" />
         </div>
       </div>
@@ -52,6 +56,14 @@
       document.getElementById("envelope").style.display = "none";
       document.querySelector(".envelope-text").style.display = "none";
       document.getElementById("invite").style.display = "block";
+
+      // Phát nhạc sau khi bấm mở thiệp
+      const audio = document.getElementById("bgm");
+      if (audio.paused) {
+        audio.play().catch(e => {
+          console.log("Không thể phát nhạc tự động:", e);
+        });
+      }
     }
   </script>
 </body>
