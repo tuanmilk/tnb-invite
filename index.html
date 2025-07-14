@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thiệp Mời TNB</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="envelope" onclick="openInvite()">
-      <img src="envelope_closed.png" id="envelope-img" alt="Phong bì" />
-    </div>
+  <!-- Nhạc nền -->
+  <audio id="bgm" autoplay loop>
+    <source src="piano.mp3" type="audio/mpeg" />
+  </audio>
 
-    <div class="invite" id="invite">
-      <audio id="bgm" autoplay loop>
-        <source src="piano.mp3" type="audio/mpeg">
-      </audio>
+  <!-- Phần phong bì đóng -->
+  <div class="envelope" onclick="openInvite()">
+    <img src="envelope_closed.png" alt="Phong bì" id="envelope">
+    <p class="envelope-text">– NHẤP VÀO THIỆP ĐỂ MỞ –</p>
+  </div>
 
-      <img src="logo.png" class="logo" alt="Logo TNB" />
-      <h1>KỶ NIỆM 5 NĂM TEAM TNB</h1>
-      <p><strong>⏰ Thời gian:</strong> 16h00 - Ngày 19/07/2025</p>
+  <!-- Nội dung thiệp -->
+  <div class="invite" id="invite" style="display: none;">
+    <div class="card">
+      <img src="logo.jpg" alt="Logo TNB" class="logo" />
+      <h2>KỶ NIỆM 5 NĂM TEAM TNB</h2>
+      <p><strong>⏰ Thời gian:</strong> 16h00 – Ngày 19/07/2025</p>
       <p><strong>📍 Địa điểm:</strong> Nhà hàng Hương Quê – Sa Đéc</p>
+      <p>📱 <a href="#" target="_blank">Xem bản đồ</a></p>
 
-      <div class="qr-container">
+      <!-- QR block -->
+      <div class="qr-block">
         <div class="qr-item">
-          <p>🗺️ Xem bản đồ</p>
-          <img src="qr_maps.png" alt="QR Maps">
+          <p>📌 Quét để xem bản đồ</p>
+          <img src="qr_maps.png" class="qr" alt="QR bản đồ" />
         </div>
         <div class="qr-item">
-          <p>💌 Chuyển khoản mừng</p>
-          <img src="qr_bank.jpg" alt="QR Bank">
+          <p>💗 Chuyển khoản mừng</p>
+          <img src="qr_bank.jpg" class="qr" alt="QR ngân hàng" />
         </div>
       </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Script mở thiệp -->
+  <script>
+    function openInvite() {
+      document.getElementById("envelope").style.display = "none";
+      document.querySelector(".envelope-text").style.display = "none";
+      document.getElementById("invite").style.display = "block";
+    }
+  </script>
 </body>
 </html>
