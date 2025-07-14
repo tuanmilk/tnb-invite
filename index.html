@@ -13,7 +13,23 @@
     <source src="piano.mp3" type="audio/mpeg" />
   </audio>
 
-  <!-- Phần phong bì đóng -->
+  <!-- Nút mạng xã hội -->
+  <div class="social-links">
+    <a href="https://youtube.com/channel/UCrMYMdk6wfWBZ2qKGJMww4g/ThanhNh%C3%A3VlogTNB?si=WkbxnfpPLecFEIkC" target="_blank" class="social-btn">
+      <img src="yt_icon.png" alt="YouTube Vlog" class="social-icon" />
+      <p>Thanh Nhã Vlog TNB</p>
+    </a>
+    <a href="https://youtube.com/@thanhnhatv_tnb?si=ppz6WPfeKUt2CTFT" target="_blank" class="social-btn">
+      <img src="yt_icon.png" alt="YouTube TV" class="social-icon" />
+      <p>Thanh Nhã TV</p>
+    </a>
+    <a href="https://www.tiktok.com/@tnbteam9999?_t=ZS-8y1LtbDMCP9&_r=1" target="_blank" class="social-btn">
+      <img src="tiktok_icon.png" alt="TikTok TNB" class="social-icon" />
+      <p>TikTok TNB Team</p>
+    </a>
+  </div>
+
+  <!-- Phong bì đóng -->
   <div class="envelope" onclick="openInvite()">
     <img src="envelope_closed.png" alt="Phong bì" id="envelope" />
     <p class="envelope-text">– NHẤP VÀO THIỆP ĐỂ MỞ –</p>
@@ -26,9 +42,12 @@
       <h2>KỶ NIỆM 5 NĂM TEAM TNB</h2>
 
       <div class="thankyou">
-        🎉 Nhân dịp kỷ niệm 5 năm thành lập, TEAM TNB trân trọng kính mời bạn đến tham dự buổi tiệc thân mật đánh dấu chặng đường đã qua và cùng nhau nhìn lại những khoảnh khắc đáng nhớ.<br><br>
-        💌 Sự hiện diện của bạn là niềm vinh hạnh to lớn đối với chúng tôi!<br><br>
-        ❤️ Chân thành cảm ơn bạn đã đồng hành cùng TEAM TNB trong suốt hành trình này.<br><br>
+        🎉 Nhân dịp kỷ niệm 5 năm thành lập, TEAM TNB trân trọng kính mời bạn đến tham dự buổi tiệc thân mật đánh dấu chặng đường đã qua và cùng nhau nhìn lại những khoảnh khắc đáng nhớ.
+        <br><br>
+        💌 Sự hiện diện của bạn là niềm vinh hạnh to lớn đối với chúng tôi!
+        <br><br>
+        ❤️ Chân thành cảm ơn bạn đã đồng hành cùng TEAM TNB trong suốt hành trình này.
+        <br><br>
         – TNB TEAM –
       </div>
 
@@ -42,7 +61,6 @@
           <p>📌 Quét để xem bản đồ</p>
           <img src="qr_maps.png" class="qr" alt="QR bản đồ" />
         </div>
-
         <div class="qr-item">
           <p>💖 Chuyển khoản mừng</p>
           <img src="qr_bank.png" class="qr" alt="QR ngân hàng" />
@@ -51,14 +69,13 @@
     </div>
   </div>
 
-  <!-- Script mở thiệp -->
+  <!-- Script mở thiệp + phát nhạc -->
   <script>
     function openInvite() {
       document.getElementById("envelope").style.display = "none";
       document.querySelector(".envelope-text").style.display = "none";
       document.getElementById("invite").style.display = "block";
 
-      // Phát nhạc sau khi bấm mở thiệp
       const audio = document.getElementById("bgm");
       if (audio.paused) {
         audio.play().catch(e => {
